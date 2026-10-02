@@ -8,19 +8,19 @@ echo "Build Started!"
 echo
 
 xcodebuild \
-  -project lara.xcodeproj \
-  -scheme lara \
+  -project EUEnabler.xcodeproj \
+  -scheme EUEnabler \
   -configuration Debug \
   -sdk iphoneos \
   -arch arm64e \
   CODE_SIGNING_ALLOWED=NO \
   CODE_SIGNING_REQUIRED=NO \
   CODE_SIGN_IDENTITY="" \
-  CODE_SIGN_ENTITLEMENTS="Config/lara.entitlements" \
+  CODE_SIGN_ENTITLEMENTS="Config/EUEnabler.entitlements" \
   archive \
-  -archivePath "$PWD/build/lara.xcarchive" 2>&1 | xcpretty
+  -archivePath "$PWD/build/EUEnabler.xcarchive" 2>&1 | xcpretty
 
-APP_PATH="$PWD/build/lara.xcarchive/Products/Applications/lara.app"
+APP_PATH="$PWD/build/EUEnabler.xcarchive/Products/Applications/EUEnabler.app"
 if [ ! -d "$APP_PATH" ]; then
   echo "Missing app at $APP_PATH"
   exit 1
@@ -29,16 +29,16 @@ rm -rf "$PWD/build/Payload"
 mkdir -p "$PWD/build/Payload"
 cp -R "$APP_PATH" "$PWD/build/Payload/"
 
-plutil -replace UIFileSharingEnabled -bool YES "$PWD/build/Payload/lara.app/Info.plist"
+plutil -replace UIFileSharingEnabled -bool YES "$PWD/build/Payload/EUEnabler.app/Info.plist"
 
 if ! command -v ldid >/dev/null 2>&1; then
   echo "ERROR: ldid not installed. Install with: brew install ldid" >&2
   exit 1
 fi
-ldid -SConfig/lara.entitlements "$PWD/build/Payload/lara.app/lara"
-(cd "$PWD/build" && /usr/bin/zip -qry lara.ipa Payload)
+ldid -SConfig/EUEnabler.entitlements "$PWD/build/Payload/EUEnabler.app/EUEnabler"
+(cd "$PWD/build" && /usr/bin/zip -qry EUEnabler.ipa Payload)
 
 echo
 echo "build successful!"
-echo "ipa at: build/lara.ipa"
+echo "ipa at: build/EUEnabler.ipa"
 exit 0

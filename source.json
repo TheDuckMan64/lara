@@ -1,29 +1,29 @@
 {
-  "name": "lara",
-  "subtitle": "A customization toolbox that utilizes DarkSword.",
+  "name": "EU Enabler",
+  "subtitle": "Enable EU/Japan Marketplace apps on iOS.",
   "description": "",
-  "iconURL": "https://raw.githubusercontent.com/rooootdev/lara/refs/heads/main/lara.png",
-  "headerURL": "https://raw.githubusercontent.com/rooootdev/lara/refs/heads/main/icon.png",
-  "website": "https://github.com/rooootdev/lara",
+  "iconURL": "https://raw.githubusercontent.com/TheDuckMan64/lara/refs/heads/main/eu_enabler.png",
+  "headerURL": "https://raw.githubusercontent.com/TheDuckMan64/lara/refs/heads/main/eu_enabler.png",
+  "website": "https://github.com/TheDuckMan64/lara",
   "tintColor": "#4185A9",
   "featuredApps": [
-    "com.roooot.lara"
+    "com.roooot.euenabler"
   ],
   "apps": [
     {
-      "name": "lara",
-      "bundleIdentifier": "com.roooot.lara",
-      "developerName": "rooootdev & lara team",
-      "subtitle": "This is the regular release build for lara.",
-      "localizedDescription": "lara is a customization toolbox that utilizes DarkSword. Supports iOS 16.0 - iOS 18.7.1 & iOS 26.0.x, excluding M5 and A19.\nFor more information, check out our GitHub! https://github.com/rooootdev/lara. Join the Discord if you need any help! https://discord.gg/gw8PcRF3Jr.",
-      "iconURL": "https://raw.githubusercontent.com/rooootdev/lara/refs/heads/main/lara.png",
+      "name": "EU Enabler",
+      "bundleIdentifier": "com.roooot.euenabler",
+      "developerName": "EU Enabler team",
+      "subtitle": "This is the regular release build of the EU Enabler.",
+      "localizedDescription": "Enables installing EU/Japan Marketplace apps by overriding App Store eligibility and spoofing the device region. Built on the DarkSword exploit. Supports iOS 16.0 - iOS 18.7.1 & iOS 26.0.x, excluding M5 and A19.\nFor more information, check out our GitHub! https://github.com/TheDuckMan64/lara.",
+      "iconURL": "https://raw.githubusercontent.com/TheDuckMan64/lara/refs/heads/main/eu_enabler.png",
       "tintColor": "#5CA399",
       "versions": [
         {
-          "version": "0.1",
+          "version": "0.3",
           "date": "2026-05-1",
           "size": 3450675,
-          "downloadURL": "https://github.com/rooootdev/lara/releases/download/0.1/lara_v0.1.ipa",
+          "downloadURL": "https://github.com/TheDuckMan64/lara/releases/download/0.3/EUEnabler.ipa",
           "localizedDescription": "",
           "minOSVersion": "16.0"
         }
